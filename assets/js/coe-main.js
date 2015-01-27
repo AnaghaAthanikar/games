@@ -46,7 +46,6 @@ function initGame() {
 }
 
 function paneldisplay() {
-//    console.log("Init tome!");
     $("#leftPanel").show();
     $("#statements").show();
     $("#switches").show();
@@ -88,10 +87,7 @@ function playQuiz() {
 
         var cagemargin=$("#smokes img").css("marginTop");
         cagemargin=parseInt(cagemargin.split('px')[0]);
-        console.log(cagemargin);
-
         var switchobj = switches["switch" + (data.optionId+1)];
-//        console.log("Data correct: " + data.correct + " | Switch obj getState: " + switchobj.getState());
         if(switchobj.getState() == (data.correct).toString()) {
 
             cagemargin+=33.20 ;
@@ -101,30 +97,24 @@ function playQuiz() {
         }
 
 
-        $("#smokes img").animate({
-            marginTop: cagemargin + "px"
-        },
-            {
-                start: function() { $("#switches").addClass("no-click"); console.log("no-click added!"); },
-                complete: function() { $("#switches").removeClass("no-click"); console.log("no-click removed!"); },
-                duration: 400
-            });
+
+
+
+        $("#smokes img").css("marginTop", cagemargin + "px")
 
         if(dataset1.join()==dataset2.join())
         {
             count++;
-            console.log(count);
             if(count==3) {
                 leftPanel.statuspanel.setState("victory");
                 $("#switches").addClass("no-click");
-                console.log("no-click added!");
             }
             else
                 $("#statement-area, #options, #switches").animate({
                         opacity: 0
                     },
                     {
-                        start: function() { $("#switches").addClass("no-click"); console.log("no-click added!");},
+                        start: function() { $("#switches").addClass("no-click");},
                         complete: function() {
                             $(this).animate({
                                 opacity: 1
@@ -133,10 +123,7 @@ function playQuiz() {
                                 start: playQuiz,
                                 complete: function() {
                                         $("#switches").removeClass("no-click");
-                                    console.log("no-click removed!");
-
-
-                                },
+                                            },
                                 duration: 600
                             });
                         },
@@ -144,7 +131,6 @@ function playQuiz() {
                     });
         }
     });
-
     $("#switches div").unbind('click').on("click",function(){
         var switchobj = switches[$(this).attr("id")];
         if(switchobj.getState()=="true")
