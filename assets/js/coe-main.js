@@ -56,6 +56,8 @@ $("#processbar").show();
 //    console.log("time"+quetime);
 
     if (quesbank.length==0) {
+
+        $("#processbar").hide();
         $("#victoryState").show();
         victoryState.setState("default");
         $("#victoryState").append("<div class='victory-txt'>" + "You have successfully completed " + percentage.toFixed(2) + "% of game" + "</div>");
@@ -101,6 +103,7 @@ function initProgressBar() {
         processbar["barloc" + i].defineState("incorrect", "<div class='pgbd incorrect'></div>");
         processbar["barloc" + i].defineState("inactive", "<div class='pgbd inactive'></div>");
         processbar["barloc" + i].setState("inactive");
+
         $("#barloc" + i).css({width: Math.floor(100/quelength) + "%", position: "relative", display:"inline-block"})
     }
 
