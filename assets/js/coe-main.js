@@ -35,6 +35,7 @@ function initGame() {
 //    $('#start span').center(true);
 
     Question.all=shuffle(Question.all);
+
     for(var i=0; i<Question.all.length; i++)
         quesbank.push(Question.all[i]);
 
@@ -56,6 +57,7 @@ function paneldisplay() {
     console.log("time"+quetime);
 
     if (quesbank.length==0) {
+        $("#processbar").hide();
         $("#victoryState").show();
         victoryState.setState("default");
         $("#victoryState").append("<div class='victory-txt'>" + "You have successfully completed " + percentage.toFixed(2) + "% of game" + "</div>");

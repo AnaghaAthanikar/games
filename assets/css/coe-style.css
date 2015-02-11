@@ -106,11 +106,12 @@ img {
 {
     background-color: #000000;
     cursor: pointer;
-    height: 3%;
+    float: left;
+    height: 28%;
     list-style-type: none;
     margin: 2%;
-    padding: 10%;
-    width: 65%;
+    padding: 2%;
+    width: 39%;
 }
 #options li:hover
 {
@@ -131,14 +132,12 @@ img {
 
     /*border: 1px solid #ffffff;*/
     height: 60%;
-    left: 30%;
+    /*left: 30%;*/
     top: 30%;
-    width: 50%;
-
+    width: 100%;
 }
 #quiz
 {
-
     display: none;
 }
 #victoryState
@@ -155,6 +154,10 @@ img {
 #mainPage
 {
     background-color: grey;
+}
+.victory-txt
+{
+    width: 60%;
 }
 
 #processbar
