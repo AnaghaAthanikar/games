@@ -1,0 +1,186 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa);
+
+/* -------------- Please do not change the CSS for the below elements ----------- */
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Comfortaa', cursive;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#ptotemy-game {
+    position: fixed;
+    width: 640px;
+    height: 480px;
+    margin:auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#log {
+    display: none;
+    pointer-events: none;
+}
+
+#entities, #items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    pointer-events: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.environment, .location, .entity, .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* -------------- You can change CSS of elements below this as will ----------- */
+
+#launchpad { background: rgba(1,1,1,1); }
+ #createScreen, #mainPage { display: none; }
+
+.no-click       { pointer-events: none; }
+.less-opacity   { opacity: 0.4; }
+.create-btn     { cursor: pointer; }
+
+#main-logo span{
+    position: relative;
+    top: 49%;
+    left: 38%;
+    color: rgba(1,1,1,1);
+    font-family: "Times New Roman";
+    font-size: 35px;
+}
+#start
+{
+    background-color: #000000;
+    cursor: pointer;
+    height: 5%;
+    left: 40%;
+    padding: 3%;
+    top: 75%;
+    width: 8%;
+
+}
+
+#start span {
+    color: whitesmoke;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#mainPageBg
+{
+
+    background: repeat;
+}
+#knowmore
+{
+    width: 10px;
+    height: 10px;
+}
+#options li
+{
+    background-color: #000000;
+    cursor: pointer;
+    height: 3%;
+    list-style-type: none;
+    margin: 2%;
+    padding: 10%;
+    width: 65%;
+}
+#options li:hover
+{
+    background-color: darkgray;
+
+}
+
+#statement-area
+{
+    background-color: #000000;
+    height: 13%;
+    left: 30%;
+    padding: 3%;
+    top: 10%;
+    width: 45%;
+}
+#options {
+
+    /*border: 1px solid #ffffff;*/
+    height: 60%;
+    left: 30%;
+    top: 30%;
+    width: 50%;
+
+}
+#quiz
+{
+
+    display: none;
+}
+#victoryState
+{
+    background-color: grey;
+    display: none;
+    /*text-align: center;*/
+    z-index: 1;
+}
+#knowmore
+{
+    display: none;
+}
+#mainPage
+{
+    background-color: grey;
+}
+.victory-txt
+{
+    width: 60%;
+}
+#processbar
+{
+    top:2%;
+    display: none;
+    height: 7%;
+    width: 100%;
+    z-index: 1;
+    left: 0.5%;
+}
+
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: red;
+}
+
+.inactive {
+    background: black;
+}
+
+.pgbd { width: 100%;
+height: 100%;}
